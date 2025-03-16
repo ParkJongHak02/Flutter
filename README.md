@@ -32,5 +32,5 @@ class MyApp extends StatelessWidget {
 }
 ```
 
-#### 사진첨부
+#### 결과출력/사진첨부
 ![Image](https://github.com/user-attachments/assets/df6ba87a-4319-46e0-aab3-f54e1b89bb3d)
