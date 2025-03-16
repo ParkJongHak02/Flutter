@@ -31,3 +31,7 @@ class MyApp extends StatelessWidget {
     }
 }
 
+
+#### 사진첨부
+![스크린샷 2025-03-16 155041](https://github.com/user-attachments/assets/602d2b77-55e0-4a3b-9f80-c60ac4f9f095)
+
