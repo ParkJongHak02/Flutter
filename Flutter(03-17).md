@@ -1,4 +1,5 @@
 # 1번
+```
 2025.03.17 실습 문제 1번
 
 void main() {
@@ -9,9 +10,10 @@ void main() {
     print("\n");
   }
 }
-
+```
 
 # 2번
+```
 void main() {
   var n = 10;
 
@@ -20,7 +22,8 @@ void main() {
   for (var y = 0; y < n; y++) {
     print("=" * n);
   }
-
+```
+```
   // 2. 테두리 사각형
   print("\n테두리 사각형:");
   for (var y = 0; y < n; y++) {
@@ -34,7 +37,8 @@ void main() {
     }
     print(result);
   }
-
+```
+```
   // 3. '/' 표시 사각형
   print("\n/ 표시 사각형:");
   for (var y = 0; y < n; y++) {
@@ -48,7 +52,8 @@ void main() {
     }
     print(result);
   }
-
+```
+```
   // 4. '\' 표시 사각형
   print("\n\\ 표시 사각형:");
   for (var y = 0; y < n; y++) {
@@ -62,7 +67,8 @@ void main() {
     }
     print(result);
   }
-
+```
+```
   // 5. 'X' 표시 사각형
   print("\nX 표시 사각형:");
   for (var y = 0; y < n; y++) {
@@ -77,8 +83,9 @@ void main() {
     print(result);
   }
 }
-
+```
 # 3번
+```
 void main() {
   var input = '2025-03-11';
 
@@ -90,3 +97,4 @@ void main() {
 
   print('$input의 요일은 $nowday 입니다.');
 }
+```
