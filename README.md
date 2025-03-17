@@ -1,36 +1,19 @@
 # ParkJongHak02 - Flutter
 
 
-## 1주차
-안드로이드 스튜디오로 플러터 개발 환경 구성하기, 최초 HelloWorld 앱 실행하기
-
-
-### 코드 정리
-```dart
-import 'package:flutter/material.dart';
-
-void main() {
-    runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-    const MyApp({super.key});
-
-    @override
-    Widget build(BuildContext context) {
-        return const MaterialApp(
-            home: Scaffold(
-                body: Center(
-                    child: Text(
-                        'Hello, World!',
-                        style: TextStyle(fontSize: 24),
-                    ),
-                ),
-            ),
-        );
-    }
-}
-```
-
-#### 결과출력/사진첨부
-![Image](https://github.com/user-attachments/assets/df6ba87a-4319-46e0-aab3-f54e1b89bb3d)
+## 강의 계획
+1주차 - 강의 소개 및 개발 환경 구축
+2주차 - 다트 문법 1
+3주차 - 다트 문법 2
+4주차 - 프로젝트 구조와 앱 구조
+5주차 - 기본 위젯
+6주차 - 내비게이션
+7주차 - 복잡한 UI 설계 및 구현
+8주차 - 객관식 중간평가
+9주차 - 앱 개발 계획
+10주차 - 프로젝트 진행
+11주차 - 프로젝트 진행
+12주차 - 앱 개발 중간 보고
+13주차 - 기본 위젯
+14주차 - 프로젝트 진행
+15주차 - 프로젝트 발표 기말평가
