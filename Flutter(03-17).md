@@ -20,8 +20,7 @@ void main() {
   for (var y = 0; y < n; y++) {
     print("=" * n);
   }
-```
-```
+
   // 2. 테두리 사각형
   print("\n테두리 사각형:");
   for (var y = 0; y < n; y++) {
@@ -35,8 +34,7 @@ void main() {
     }
     print(result);
   }
-```
-```
+
   // 3. '/' 표시 사각형
   print("\n/ 표시 사각형:");
   for (var y = 0; y < n; y++) {
@@ -50,8 +48,7 @@ void main() {
     }
     print(result);
   }
-```
-```
+
   // 4. '\' 표시 사각형
   print("\n\\ 표시 사각형:");
   for (var y = 0; y < n; y++) {
@@ -65,8 +62,7 @@ void main() {
     }
     print(result);
   }
-```
-```
+
   // 5. 'X' 표시 사각형
   print("\nX 표시 사각형:");
   for (var y = 0; y < n; y++) {
