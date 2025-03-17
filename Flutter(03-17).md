@@ -87,14 +87,15 @@ void main() {
 # 3번
 ```
 void main() {
-  var input = '2025-03-11';
+  String input = '2025-03-11'; // 입력값
+  List<String> weekdays = ['월', '화', '수', '목', '금', '토', '일'];
 
+  // 입력 문자열을 DateTime 객체로 변환
   DateTime date = DateTime.parse(input);
 
-  List<String> days = ['월요일', '화요일', '수요일', '목요일', '금요일', '토요일', '일요일'];
+  // DateTime의 weekday는 1(월요일)부터 7(일요일)까지 반환
+  String result = weekdays[date.weekday - 1]; // 배열의 인덱스는 0부터 시작
 
-  String nowday = days[date.weekday - 1];
-
-  print('$input의 요일은 $nowday 입니다.');
+  print(result); // 요일 출력
 }
 ```
