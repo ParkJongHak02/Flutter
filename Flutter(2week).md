@@ -1,4 +1,6 @@
-# 실습 1번
+# ParkJongHak02 - Flutter
+
+## 실습 1번
 ```
 void main() {
   for (var i = 1; i < 10; i++) {
@@ -10,7 +12,7 @@ void main() {
 }
 ```
 
-# 실습 2번
+## 실습 2번
 ```
 void main() {
   var n = 10;
@@ -122,7 +124,7 @@ void main() {
 }
 
 ```
-# 실습 3번
+## 실습 3번
 ```
 void main() {
   String input = '2025-03-11'; // 입력값
