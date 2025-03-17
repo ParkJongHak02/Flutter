@@ -1,7 +1,5 @@
-# 1번
+# 실습 1번
 ```
-2025.03.17 실습 문제 1번
-
 void main() {
   for (var i = 1; i < 10; i++) {
     for (var j = 1; j < 10; j++) {
@@ -12,7 +10,7 @@ void main() {
 }
 ```
 
-# 2번
+# 실습 2번
 ```
 void main() {
   var n = 10;
@@ -84,7 +82,7 @@ void main() {
   }
 }
 ```
-# 3번
+# 실습 3번
 ```
 void main() {
   String input = '2025-03-11'; // 입력값
