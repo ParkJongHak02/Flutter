@@ -5,7 +5,7 @@
 
 
 ### 수업 정리
-'''
+```
 class Person {
   String name = "";
   int age = 0;
@@ -22,9 +22,9 @@ void main()
   na.age = 48;
   print([na.name, na.age]);
 }
-'''
+```
 
-'''
+```
 class Person {
   // 클래스 필드 이름 앞에 '_'를 붙이는 것은 다수의 언어에서 사용하는 스타일임.
   // 예) Java, C++, C#
@@ -59,9 +59,9 @@ void main()
   print([na.name, na.age, na.desc]);
   
 }
-'''
+```
 
-'''
+```
 class Person {
   String? name;
   int? age;
@@ -78,9 +78,9 @@ void main()
   var p4 = Person(name: '정세팔', age: 48);
 }
 
-'''
+```
 
-'''
+```
 class Rectangle {
   // 사각형을 왼쪽, 상단, 너비 , 높이로 표현
   num left, top, width, height;
@@ -103,9 +103,9 @@ void main()
   // left, top, width, height <-> left, top, right, bottom
 }
 
-'''
+```
 
-'''
+```
 class Hero {
   String name = '영웅';
   
@@ -133,9 +133,9 @@ void main()
   //hero.fly();
   print(hero.name);
 }
-'''
+```
 
-'''
+```
 abstract class Monster {
   void attack();
 }
@@ -165,9 +165,9 @@ void main()
   List<Monster> monsters = [g1, b1];
   monsters.forEach((m) => m.attack());
 }
-'''
+```
 
-'''
+```
 enum Status { login, logout }
 
 void main()
@@ -184,9 +184,9 @@ void main()
       break;
   }
 }
-'''
+```
 
-'''
+```
 void main()
 {
   var l1 = [1,2,3,4,5,6];
@@ -212,9 +212,9 @@ void main()
   s1.add(6);
   print(s1);
 }
-'''
+```
 
-'''
+```
 void func_a()
 {
   print('왼쪽!');
