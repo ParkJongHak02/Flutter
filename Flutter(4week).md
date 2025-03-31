@@ -176,4 +176,5 @@ flutter:
   # see https://flutter.dev/to/font-from-package
 ```
 ### 출력 화면
+![33](https://github.com/user-attachments/assets/25dbaa68-2b04-4a9c-80ee-1c35d86c456c)
 
