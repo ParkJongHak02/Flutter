@@ -6,7 +6,7 @@
 
 
 ### 코드 정리
-'''
+```
 import 'package:flutter/material.dart';
 import 'dart:async';
 import 'package:intl/intl.dart';
@@ -78,7 +78,7 @@ class _CurrentTimeScreenState extends State<CurrentTimeScreen> {
     );
   }
 }
-'''
+```
 
 '''
 
