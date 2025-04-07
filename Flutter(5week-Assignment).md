@@ -95,6 +95,140 @@ class MyHomePage extends StatelessWidget {
 }
 
 ```
+계산기 만들기(화면만)
+```
+import 'package:flutter/material.dart';
+
+void main() => runApp(CalculatorApp());
+
+class CalculatorApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: CalculatorScreen(),
+    );
+  }
+}
+
+class CalculatorScreen extends StatelessWidget {
+  final List<String> topRow = ['MC', 'MR', 'M+', 'M−', 'MS', 'M˅'];
+  final List<List<String>> buttons = [
+    ['%', 'CE', 'C', '⌫'],
+    ['⅟x', 'x²', '√x', '÷'],
+    ['7', '8', '9', '×'],
+    ['4', '5', '6', '−'],
+    ['1', '2', '3', '+'],
+    ['±', '0', '.', '='],
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.black,
+      body: SafeArea(
+        child: Center(
+          child: ConstrainedBox(
+            constraints: BoxConstraints(
+              maxWidth: 420,
+              maxHeight: 800,
+            ),
+            child: AspectRatio(
+              aspectRatio: 0.55,
+              child: Column(
+                children: [
+                  // Custom top bar
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Row(
+                          children: [
+                            Icon(Icons.menu, color: Colors.white70),
+                            SizedBox(width: 10),
+                            Text('표준', style: TextStyle(color: Colors.white70, fontSize: 18)),
+                            SizedBox(width: 6),
+                            Icon(Icons.crop_square, color: Colors.white70, size: 16),
+                          ],
+                        ),
+                        Icon(Icons.history, color: Colors.white70),
+                      ],
+                    ),
+                  ),
+                  Expanded(
+                    flex: 2,
+                    child: Container(
+                      alignment: Alignment.bottomRight,
+                      padding: EdgeInsets.all(20),
+                      child: Text(
+                        '0',
+                        style: TextStyle(color: Colors.white, fontSize: 48),
+                      ),
+                    ),
+                  ),
+                  Row(
+                    children: topRow
+                        .map((label) => Expanded(
+                      child: Container(
+                        padding: EdgeInsets.symmetric(vertical: 6),
+                        alignment: Alignment.center,
+                        child: Text(
+                          label,
+                          style: TextStyle(color: Colors.white70, fontSize: 18),
+                        ),
+                      ),
+                    ))
+                        .toList(),
+                  ),
+                  Expanded(
+                    flex: 13,
+                    child: Column(
+                      children: buttons.map((row) {
+                        return Expanded(
+                          child: Row(
+                            children: row.map((label) {
+                              return Expanded(
+                                child: Container(
+                                  margin: EdgeInsets.all(1),
+                                  child: ElevatedButton(
+                                    onPressed: () {},
+                                    style: ElevatedButton.styleFrom(
+                                      padding: EdgeInsets.zero,
+                                      backgroundColor: Colors.grey[900],
+                                      foregroundColor: Colors.white,
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(6),
+                                      ),
+                                    ),
+                                    child: Center(
+                                      child: Text(
+                                        label,
+                                        style: TextStyle(fontSize: 22),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              );
+                            }).toList(),
+                          ),
+                        );
+                      }).toList(),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+```
 ### 화면 출력
 다음과 같은 화면 만들기
 ![스크린샷 2025-04-07 141442](https://github.com/user-attachments/assets/d5be42fa-527b-434c-996a-23e4fd4af826)
+계산기 만들기(화면만)
+![스크린샷 2025-04-07 144228](https://github.com/user-attachments/assets/d8b17ddf-22ca-4374-a3ec-880d15dee89d)
