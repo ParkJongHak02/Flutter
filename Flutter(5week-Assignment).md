@@ -6,6 +6,8 @@
 <br/>
 ![스크린샷 2025-04-07 140254](https://github.com/user-attachments/assets/4d6a86a9-9b7a-4954-84ee-f316228b8e0c)
 <br/>
+계산기 만들기(화면만)
+<br/>
 ![스크린샷 2025-04-07 140300](https://github.com/user-attachments/assets/e6ac4ab1-3c74-4b96-b9e6-cbc31456b9f8)
 
 ### 코드 정리
