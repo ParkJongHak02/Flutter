@@ -5,6 +5,7 @@
 
 
 ### 수업 정리(a_6_1)
+first_page.dart
 ```
 import 'package:a_6_1/second_page.dart';
 import 'package:flutter/material.dart';
@@ -38,7 +39,7 @@ class FirstPage extends StatelessWidget {
   }
 }
 ```
-
+second_page.dart
 ```
 import 'package:flutter/material.dart';
 import 'package:a_6_1/Person.dart';
@@ -65,7 +66,7 @@ class SecondPage extends StatelessWidget {
 }
 
 ```
-
+main.dart
 ```
 import 'package:flutter/material.dart';
 import 'package:a_6_1/first_page.dart';
@@ -96,7 +97,7 @@ class MyApp extends StatelessWidget {
   }
 }
 ```
-
+Person.dart
 ```
 class Person {
   String name;
