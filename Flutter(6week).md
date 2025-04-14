@@ -199,19 +199,313 @@ class MyApp extends StatelessWidget {
 // }
 
 ```
+test_CheckBox.dart
 ```
+import 'package:flutter/material.dart';
+
+class TestCheckbox extends StatefulWidget {
+  const TestCheckbox({super.key});
+
+
+  @override
+  State<TestCheckbox> createState() => _CheckboxState();
+}
+
+class _CheckboxState extends State<TestCheckbox> {
+ bool? isChecked1 = false;
+ bool isChecked2 = false;
+
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        title: Text('Checkbox / Switch 테스트'),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Checkbox(
+                value: isChecked1,
+                onChanged: (value) {
+                  setState(() {
+                    isChecked1 = value;
+                  });
+                }
+            ),
+
+            SizedBox(height: 80),
+
+            Switch(
+                value: isChecked2,
+                onChanged: (value) {
+                  setState(() {
+                    isChecked2 = value;
+                  });
+                },
+             ),
+           ],
+          ),
+        ),
+      );
+    }
+  }
 
 ```
+test_dialog.dart
 ```
+import 'package:flutter/material.dart';
+
+class TestDialog extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text('다이얼로그 테스트')),
+      body: Padding(
+        padding: EdgeInsets.all(16.0),
+        child: Column(
+          children: [
+            ElevatedButton(
+              onPressed: () {
+                showDialog(
+                  context: context,
+                  barrierDismissible: false,
+                  builder: (BuildContext context) {
+                    return AlertDialog(
+                      title: Text('제목'),
+                      content: SingleChildScrollView(
+                        child: ListBody(
+                          children: [
+                            Text('Alert Dialog입니다.'),
+                            Text('OK를 눌러 닫습니다.'),
+                          ],
+                        ),
+                      ),
+                      actions: [
+                        TextButton(
+                          child: Text('OK'),
+                          onPressed: () {
+                            Navigator.of(context).pop();
+                          },
+                        ),
+                        TextButton(
+                          child: Text('Cancel'),
+                          onPressed: () {
+                            Navigator.of(context).pop(false);
+                          },
+                        ),
+                      ],
+                    );
+                  }, // ← 이 괄호 다음에 세미콜론 빠뜨리면 오류남!
+                );
+              },
+              child: Text('Alert Dialog'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
 
 ```
+test_DropDownButton.dart
 ```
+import 'package:flutter/material.dart';
+
+class TestDropdownbutton extends StatefulWidget {
+  const TestDropdownbutton({super.key});
+
+  @override
+  State<TestDropdownbutton> createState() => _DropDownButtonState();
+}
+
+class _DropDownButtonState extends State<TestDropdownbutton> {
+  final _valueList = ['첫번째', '두번째', '세번째'];
+  String? _selectedValue = '첫번째';
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        title: Text('DropDownButton 테스트'),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            DropdownButton<String>(
+              value: _selectedValue,
+              items: _valueList
+                  .map((value) => DropdownMenuItem(
+                value: value,
+                child: Text(value),
+              ))
+                  .toList(),
+              onChanged: (value) {
+                setState(() {
+                  _selectedValue = value;
+                });
+                print(_selectedValue);
+              },
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
 
 ```
+test_Gessture.dart
 ```
+import 'package:flutter/material.dart';
+
+class TestGesture extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text(' GestureDetctor, InkWell 테스트')),
+      body: Padding(
+        padding: EdgeInsets.all(16.0),
+        child: Column(
+          children: [
+            GestureDetector(
+              onTap: () {
+                print: Text('GestureDetctor!!');
+            },
+              child: Text('클릭돼'),
+            ),
+            
+            SizedBox(height: 80),
+            
+            InkWell(
+              onTap: () {
+                print: Text('Inkwell!!');
+              },
+              child: Text('클릭돼?'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
 
 ```
+test_Radio.dart
+```
+import 'package:flutter/material.dart';
 
+enum Gender {
+  MAN,
+  WOMAN,
+}
+
+class TestRadio extends StatefulWidget {
+  const TestRadio({super.key});
+
+  @override
+  State<TestRadio> createState() => _RadioState();
+}
+
+class _RadioState extends State<TestRadio> {
+  Gender? _gender = Gender.MAN;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        title: Text('Checkbox / Switch 테스트'),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            ListTile(
+              title: Text('남자'),
+              leading: Radio(
+                value: Gender.MAN,
+                groupValue: _gender,
+                onChanged: (value) {
+                  setState(() {
+                    _gender = value;
+                  });
+                },
+              ),
+            ),
+            ListTile(
+              title: Text('여자'),
+              leading: Radio(
+                value: Gender.WOMAN,
+                groupValue: _gender,
+                onChanged: (value) {
+                  setState(() {
+                    _gender = value;
+                  });
+                },
+              ),
+            ),
+            SizedBox(height: 80),
+
+            RadioListTile<Gender>(
+              title: Text('남자'),
+              value: Gender.MAN,
+              groupValue: _gender,
+              onChanged: (value) {
+                setState(() {
+                  _gender = value;
+                });
+              },
+            ),
+            RadioListTile<Gender>(
+              title: Text('여자'),
+              value: Gender.WOMAN,
+              groupValue: _gender,
+              onChanged: (value) {
+                setState(() {
+                  _gender = value;
+                });
+              },
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+```
+test_TextField.dart
+```
+import 'package:flutter/material.dart';
+
+class TestTextField extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text('TextField 테스트')),
+      body: Padding(
+        padding: EdgeInsets.all(16.0),
+        child: Column(
+          children: [
+            TextField(),
+            TextField(
+              decoration: InputDecoration(labelText: '여기에 입력하세요'),
+            ),
+            SizedBox(height: 32),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+```
 ### 화면 출력
 ![1 (1)](https://github.com/user-attachments/assets/a33be731-9e8f-4569-b923-da00a7804483)
 ![2 (1)](https://github.com/user-attachments/assets/5ae20298-cf5b-49c3-a42b-f40eb49d14f8)
