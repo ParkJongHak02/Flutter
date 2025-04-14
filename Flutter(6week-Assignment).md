@@ -42,7 +42,7 @@ ok
 
 ---
 
-## ✅ **2. 실습용 전체 코드 **  
+## ✅ 2. 실습용 전체 코드
 
 
 ---
@@ -183,4 +183,8 @@ class _SecondStatefulPageState extends State<SecondStatefulPage> {
     );
   }
 }
+```
+### 화면 출력
+![스크린샷 2025-04-14 135523](https://github.com/user-attachments/assets/e628641f-bf0a-4560-8091-18a346f5cac5)
+![스크린샷 2025-04-14 135534](https://github.com/user-attachments/assets/b4b5727c-cb4b-46de-8449-53f9a61c2db2)
 
