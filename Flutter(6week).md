@@ -98,7 +98,12 @@ class MyApp extends StatelessWidget {
 ```
 
 ```
+class Person {
+  String name;
+  int age;
 
+  Person(this.name, this.age);
+}
 ```
 ### 화면 출력
 ![1 (1)](https://github.com/user-attachments/assets/a33be731-9e8f-4569-b923-da00a7804483)
