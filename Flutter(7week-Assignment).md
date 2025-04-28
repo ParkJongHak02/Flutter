@@ -55,5 +55,200 @@ ex)</br>
 - 값과 화면 구성을 분리하여 유지보수성과 확장성 향상
 ---
 
+## 수정 코드
+main.dart
+```
+import 'package:flutter/material.dart';
+import 'package:a_7_1/page1.dart';
+import 'package:a_7_1/page2.dart';
+import 'package:a_7_1/page3.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: '복잡한 ui작성',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.orange),
+      ),
+      home: const MyHomePage(),
+      debugShowCheckedModeBanner: false,
+    );
+  }
+}
+
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key});
+
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  int _index = 0;
+  final List<Widget> _pages = [Page1(), Page2(), Page3()];
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        title: const Text('복잡한 ui', style: TextStyle(color: Colors.black)),
+        centerTitle: true,
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.add, color: Colors.black),
+            onPressed: () {},
+          ),
+        ],
+      ),
+      body: _pages[_index],
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: _index,
+        items: const [
+          BottomNavigationBarItem(label: '홈', icon: Icon(Icons.home)),
+          BottomNavigationBarItem(label: '이용서비스', icon: Icon(Icons.assignment)),
+          BottomNavigationBarItem(label: '내 정보', icon: Icon(Icons.account_circle)),
+        ],
+        onTap: (index) {
+          setState(() {
+            _index = index;
+          });
+        },
+      ),
+    );
+  }
+}
+
+```
+page1.dart
+```
+import 'package:flutter/material.dart';
+import 'package:carousel_slider/carousel_slider.dart';
+
+class Page1 extends StatefulWidget {
+  @override
+  State<Page1> createState() => _Page1State();
+}
+
+class _Page1State extends State<Page1> {
+  // ⭐️ 상태로 관리하는 데이터들
+  List<Map<String, dynamic>> menuItems = [];
+  List<String> imageUrls = [];
+  List<String> boardItems = [];
+
+  @override
+  void initState() {
+    super.initState();
+    _updateData(3); // 처음에는 3개로 시작
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: ListView(
+        children: [
+          _buildTopMenu(),
+          const SizedBox(height: 16),
+          _buildMiddleImageSlider(),
+          const SizedBox(height: 16),
+          _buildBottomBoard(),
+          const SizedBox(height: 16),
+          _buildControlButtons(), // 개수 조정 버튼들
+        ],
+      ),
+    );
+  }
+
+  Widget _buildTopMenu() {
+    return Wrap(
+      alignment: WrapAlignment.center,
+      spacing: 20,
+      runSpacing: 20,
+      children: menuItems.map((menu) => _buildMenuItem(menu)).toList(),
+    );
+  }
+
+  Widget _buildMenuItem(Map<String, dynamic> menu) {
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        Icon(menu['icon'], size: 40),
+        Text(menu['title']),
+      ],
+    );
+  }
+
+  Widget _buildMiddleImageSlider() {
+    return CarouselSlider(
+      items: imageUrls.map((url) {
+        return Builder(
+          builder: (BuildContext context) {
+            return Container(
+              width: MediaQuery.of(context).size.width,
+              margin: const EdgeInsets.symmetric(horizontal: 5.0),
+              child: Image.network(url, fit: BoxFit.cover),
+            );
+          },
+        );
+      }).toList(),
+      options: CarouselOptions(height: 150.0, autoPlay: true),
+    );
+  }
+
+  Widget _buildBottomBoard() {
+    return ListView.builder(
+      shrinkWrap: true,
+      physics: const NeverScrollableScrollPhysics(),
+      itemCount: boardItems.length,
+      itemBuilder: (context, index) {
+        return ListTile(
+          leading: const Icon(Icons.notifications_none),
+          title: Text(boardItems[index]),
+        );
+      },
+    );
+  }
+
+  Widget _buildControlButtons() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: [
+        ElevatedButton(onPressed: () => _updateData(3), child: const Text('3개')),
+        ElevatedButton(onPressed: () => _updateData(5), child: const Text('5개')),
+        ElevatedButton(onPressed: () => _updateData(7), child: const Text('7개')),
+        ElevatedButton(onPressed: () => _updateData(10), child: const Text('10개')),
+      ],
+    );
+  }
+
+  void _updateData(int count) {
+    setState(() {
+      // 메뉴 아이템 생성
+      menuItems = List.generate(count, (index) => {
+        'icon': Icons.local_taxi,
+        'title': '택시 $index',
+      });
+
+      // 사진 URL 생성 (picsum.photos 사용)
+      imageUrls = List.generate(count, (index) => 'https://picsum.photos/500/300?random=$index');
+
+      // 게시판 항목 생성
+      boardItems = List.generate(count, (index) => '[이벤트] 이것은 공지사항 $index 입니다.');
+    });
+  }
+}
+
+```
+나머지 page2.dart, page3.dart, pubspec.yaml은 동일
+
+## 화면출력
 
 
