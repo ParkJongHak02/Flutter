@@ -4,7 +4,7 @@
 ## 7주차
 
 
-### 수업 정리(a_7_1)
+### 수업 중 코드정리(a_7_1)
 main.dart
 ```
 import 'package:flutter/material.dart';
