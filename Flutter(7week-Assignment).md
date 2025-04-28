@@ -138,7 +138,7 @@ class Page1 extends StatefulWidget {
 }
 
 class _Page1State extends State<Page1> {
-  // ⭐️ 상태로 관리하는 데이터들
+
   List<Map<String, dynamic>> menuItems = [];
   List<String> imageUrls = [];
   List<String> boardItems = [];
@@ -146,7 +146,7 @@ class _Page1State extends State<Page1> {
   @override
   void initState() {
     super.initState();
-    _updateData(3); // 처음에는 3개로 시작
+    _updateData(3);
   }
 
   @override
@@ -161,7 +161,7 @@ class _Page1State extends State<Page1> {
           const SizedBox(height: 16),
           _buildBottomBoard(),
           const SizedBox(height: 16),
-          _buildControlButtons(), // 개수 조정 버튼들
+          _buildControlButtons(), 
         ],
       ),
     );
@@ -231,16 +231,16 @@ class _Page1State extends State<Page1> {
 
   void _updateData(int count) {
     setState(() {
-      // 메뉴 아이템 생성
+
       menuItems = List.generate(count, (index) => {
         'icon': Icons.local_taxi,
         'title': '택시 $index',
       });
 
-      // 사진 URL 생성 (picsum.photos 사용)
+
       imageUrls = List.generate(count, (index) => 'https://picsum.photos/500/300?random=$index');
 
-      // 게시판 항목 생성
+
       boardItems = List.generate(count, (index) => '[이벤트] 이것은 공지사항 $index 입니다.');
     });
   }
@@ -250,5 +250,9 @@ class _Page1State extends State<Page1> {
 나머지 page2.dart, page3.dart, pubspec.yaml은 동일
 
 ## 화면출력
-
-
+![aa](https://github.com/user-attachments/assets/b031a499-5265-47c6-a5ea-c5e7361e351b)
+![s](https://github.com/user-attachments/assets/5170c116-c574-4cdc-9a17-4fd691350427)
+![d](https://github.com/user-attachments/assets/90b6e9f2-8164-4021-8b4e-471c5bd468bf)
+![f](https://github.com/user-attachments/assets/e0a59335-e3c6-417a-b908-9af9c5575423)
+![g](https://github.com/user-attachments/assets/4c5df592-ba55-4d86-b52a-382fd6a6f081)
+![h](https://github.com/user-attachments/assets/723e140e-ab63-4f01-af98-531f5053adbe)
