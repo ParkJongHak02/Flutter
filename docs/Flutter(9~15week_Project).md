@@ -137,8 +137,6 @@ FocusMate/
 
 ---
 
----
-
 # 🔟 11주차 – 기능 개발 (레이아웃)
 
 ## ✅ 이번 주 개발 목표
@@ -182,14 +180,14 @@ FocusMate/
 
 ## 📁 디렉토리 구조 (11주차 기준)
 
-lib/
-├── main.dart
-└── screens/
-├── home_screen.dart
-├── timer_screen.dart
-├── record_screen.dart
-├── stats_screen.dart
-└── main_tab_screen.dart
+lib/   
+├── main.dart   
+└── screens/   
+├── home_screen.dart   
+├── timer_screen.dart   
+├── record_screen.dart   
+├── stats_screen.dart   
+└── main_tab_screen.dart   
 
 
 ---
