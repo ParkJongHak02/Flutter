@@ -70,16 +70,16 @@
 
 ## 📂 디렉토리 구조 (예정)
 
-FocusMate/
-├── lib/
-│ ├── screens/
-│ ├── widgets/
-│ ├── models/
-│ ├── services/
-│ └── main.dart
-├── assets/
-├── pubspec.yaml
-├── README.md
+FocusMate/   
+├── lib/   
+│ ├── screens/   
+│ ├── widgets/   
+│ ├── models/   
+│ ├── services/   
+│ └── main.dart    
+├── assets/   
+├── pubspec.yaml   
+├── README.md   
 
 
 ---
