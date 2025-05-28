@@ -6,7 +6,7 @@
 
 
 ### 코드 정리
-```dart
+```dart  
 import 'package:flutter/material.dart';
 
 void main() {
