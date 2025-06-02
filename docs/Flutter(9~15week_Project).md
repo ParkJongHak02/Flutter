@@ -222,8 +222,11 @@ if (secondsLeft > 0) {
   _onTimerComplete(); // ✅ 이 함수 내에서 저장 처리
   setState(() => isRunning = false);
 }
+```
 
 ---
+🗂️ 디렉토리 구조 (12주차 기준)
+
 lib/   
 ├── main.dart     
 ├── models/   
