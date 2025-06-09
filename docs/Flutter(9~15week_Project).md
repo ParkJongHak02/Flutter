@@ -326,3 +326,7 @@ lib/
 └── widgets/   
     └── daily_chart_widget.dart  (*예정*)
 ---
+![1](https://github.com/user-attachments/assets/71b1a45a-ed21-4e0c-9809-b14e62b0547b)
+![2](https://github.com/user-attachments/assets/e1b6bca8-a39e-4ac6-b3dc-25aa113827f5)
+![3](https://github.com/user-attachments/assets/3a508f49-ac87-476e-b125-1d4aaa5a6f57)
+![4](https://github.com/user-attachments/assets/feff85b6-85ba-45f7-add0-9c7e1586bf76)
