@@ -10,7 +10,8 @@
 <br/>
 ![스크린샷 2025-04-07 140300](https://github.com/user-attachments/assets/e6ac4ab1-3c74-4b96-b9e6-cbc31456b9f8)
 
-### 코드 정리
+---
+### 📄 main.dart
 다음과 같은 화면 만들기
 ```
 import 'package:flutter/material.dart';
@@ -95,7 +96,8 @@ class MyHomePage extends StatelessWidget {
 }
 
 ```
-계산기 만들기(화면만)
+---
+### 📄계산기 만들기(화면만)
 ```
 import 'package:flutter/material.dart';
 
@@ -227,7 +229,8 @@ class CalculatorScreen extends StatelessWidget {
 }
 
 ```
-### 화면 출력
+---
+### 🖼️ 출력 화면
 다음과 같은 화면 만들기
 ![스크린샷 2025-04-07 141442](https://github.com/user-attachments/assets/d5be42fa-527b-434c-996a-23e4fd4af826)
 계산기 만들기(화면만)
