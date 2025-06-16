@@ -1,7 +1,7 @@
-# ParkJongHak02 - Flutter
+# 🚀 ParkJongHak02 - Flutter
 
 
-## 5주차 과제
+## 📅 5주차 과제 - Flutter 실습 과제
 다음과 같은 화면 만들기
 <br/>
 ![스크린샷 2025-04-07 140254](https://github.com/user-attachments/assets/4d6a86a9-9b7a-4954-84ee-f316228b8e0c)
