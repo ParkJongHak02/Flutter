@@ -1,12 +1,18 @@
-# ParkJongHak02 - Flutter
+# 🚀 ParkJongHak02 - Flutter
 
+---
 
-## 4주차
+## 📅 4주차 - Flutter 기본 위젯 및 프로젝트 실습
 
+---
 
-### 수업 정리
-main.dart(a_4week_1)
-```
+### 📝 실습 1 (a_4week_1)
+
+---
+
+#### 📄 main.dart
+
+```dart
 import 'package:flutter/material.dart';
 
 void main() {
@@ -16,30 +22,13 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // TRY THIS: Try running your application with "flutter run". You'll see
-        // the application has a purple toolbar. Then, without quitting the app,
-        // try changing the seedColor in the colorScheme below to Colors.green
-        // and then invoke "hot reload" (save your changes or press the "hot
-        // reload" button in a Flutter-supported IDE, or press "r" if you used
-        // the command line to start the app).
-        //
-        // Notice that the counter didn't reset back to zero; the application
-        // state is not lost during the reload. To reset the state, use hot
-        // restart instead.
-        //
-        // This works for code too, not just values: Most code changes can be
-        // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      // home: const MyHomePage(title: 'Flutter Demo Home Page'),
       home: MyHomePage(),
     );
   }
@@ -60,9 +49,10 @@ class MyHomePage extends StatelessWidget {
     );
   }
 }
-```
 
-pubspec.yaml
+```
+---
+### 📄 pubspec.yaml
 ```
 name: a_4week_1
 description: "A new Flutter project."
@@ -155,7 +145,8 @@ flutter:
   # see https://flutter.dev/to/font-from-package
 ```
 
-widget_test.dart
+---
+### 📄widget_test.dart
 ```
 // This is a basic Flutter widget test.
 //
@@ -188,10 +179,12 @@ void main() {
   });
 }
 ```
-### 화면 출력
+---
+### 🖼️화면 출력
 ![스크린샷 2025-03-31 161913](https://github.com/user-attachments/assets/d9f39b5a-922a-42a9-bf01-d6778a09a66e)
 
-main.dart(a_4week_2)
+---
+### 📄main.dart(a_4week_2)
 ```
 import 'package:flutter/material.dart';
 
@@ -298,7 +291,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
 ```
 
-pubspec.yaml
+---
+### 📄pubspec.yaml
 ```
 name: a_4week_2
 description: "A new Flutter project."
@@ -392,7 +386,8 @@ flutter:
 
 ```
 
-widget_test.dart
+---
+### 📄widget_test.dart
 ```
 // This is a basic Flutter widget test.
 //
@@ -426,10 +421,12 @@ void main() {
 }
 
 ```
-### 화면 출력
+---
+### 🖼️화면 출력
 ![스크린샷 2025-03-31 162853](https://github.com/user-attachments/assets/651479b6-5f9c-4840-b861-1634607964e4)
 
-main.dart(a_4week_3)
+---
+### 📄main.dart(a_4week_3)
 ```
 import 'package:flutter/material.dart';
 
@@ -556,7 +553,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
 ```
 
-pubspec.yaml
+---
+### 📄pubspec.yaml
 ```
 name: a_4week_3
 description: "A new Flutter project."
@@ -650,7 +648,8 @@ flutter:
 
 ```
 
-widget_test.dart
+---
+### 📄widget_test.dart
 ```
 // This is a basic Flutter widget test.
 //
@@ -684,5 +683,6 @@ void main() {
 }
 
 ```
-### 화면 출력
+---
+### 🖼️화면 출력
 ![스크린샷 2025-03-31 163451](https://github.com/user-attachments/assets/2d5e311c-fda4-477c-a44c-ccc6026b8a64)
