@@ -83,6 +83,7 @@ FocusMate/
 
 
 ---
+## 📸 화면출력 결과
 ![image](https://github.com/user-attachments/assets/d333bd95-9fae-40e6-acd0-d1c8820279cd)
 ---
 
@@ -129,6 +130,13 @@ FocusMate/
 }
 ```
 ---
+## 📸 화면출력 결과
+![image](https://github.com/user-attachments/assets/bd889f9c-741e-42f3-9b14-13c5fe9d4896)
+![image](https://github.com/user-attachments/assets/0128aa14-10e4-47d2-8271-6027061d7656)
+![image](https://github.com/user-attachments/assets/823decd1-bf7f-4fbc-a5ef-48a638519951)
+![image](https://github.com/user-attachments/assets/8eb3e8b6-3c22-45ee-875c-de663bb198be)
+---
+
 
 # 📅 3주차(11) – 기능 개발 (레이아웃)
 
@@ -183,6 +191,10 @@ lib/
 └── main_tab_screen.dart   
 
 
+---
+## 📸 화면출력 결과
+![image](https://github.com/user-attachments/assets/18426b11-915b-4d11-acff-f27412c71638)
+![image](https://github.com/user-attachments/assets/83046a99-e141-4b86-a9d2-e9e99c46bee3)
 ---
 
 # 📅 4주차(12) – 집중 시간 저장 및 로컬 데이터 관리
@@ -242,6 +254,11 @@ lib/
     ├── stats_screen.dart   
     └── main_tab_screen.dart   
 
+---
+## 📸 화면출력 결과
+![image](https://github.com/user-attachments/assets/e6605b40-2d39-456e-8659-aca3ca930cb2)
+![image](https://github.com/user-attachments/assets/ac4e7e48-b4f2-4c51-bd8c-ef7e2e6dc109)
+![image](https://github.com/user-attachments/assets/6bb399be-e141-468a-8252-4c827c51820d)
 ---
 
 # 📅 5주차(13) – 통계 차트 기능 및 사용자 설정 기능 확장
@@ -397,7 +414,7 @@ lib/
 
 ---
 
-## 📸 리디자인 결과 예시
+## 📸 리디자인 결과 
 ![z](https://github.com/user-attachments/assets/bfd45f27-6173-4688-b617-c18d331e9188)
 ![x](https://github.com/user-attachments/assets/f5431401-0e3b-4cfb-b952-59f2620dc390)
 ![c](https://github.com/user-attachments/assets/0fab0325-ba87-47bc-bc0f-e05003f6da12)
