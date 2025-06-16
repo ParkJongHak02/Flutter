@@ -83,6 +83,7 @@ FocusMate/
 
 
 ---
+![image](https://github.com/user-attachments/assets/d333bd95-9fae-40e6-acd0-d1c8820279cd)
 
 # 📅 2주차(10) – 요구사항 목록, 기획 및 설계, 개발 환경 설정
 
