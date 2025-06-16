@@ -330,3 +330,89 @@ lib/
 ![2](https://github.com/user-attachments/assets/e1b6bca8-a39e-4ac6-b3dc-25aa113827f5)
 ![3](https://github.com/user-attachments/assets/3a508f49-ac87-476e-b125-1d4aaa5a6f57)
 ![4](https://github.com/user-attachments/assets/feff85b6-85ba-45f7-add0-9c7e1586bf76)
+
+# 📅 6주차(14) – 디자인 개선, 통계 페이지 통합 리디자인, 전체 UI 고도화
+
+## ✅ 이번 주 개발 목표
+
+- 전체 페이지 UI/UX 고급화 (실제 앱처럼 깔끔한 디자인 적용)
+- 상단 AppBar 디자인 통일 (`FocusMate - 페이지명`)
+- 홈, 타이머, 기록, 통계 화면 디자인 리디자인 완료
+- 통계 페이지 내부 구조 정비 및 ChoiceChip 인터랙션 개선
+
+---
+
+## 🎨 전체 UI 통일 작업
+
+| 화면 | 개선 내용 |
+|------|----------|
+| 홈 화면 | 카드형 레이아웃 적용, 목표 시간 저장 UI 개선, "오늘 기록 초기화" 버튼 디자인 변경 |
+| 타이머 화면 | 앱 상단바 삭제, 상단에 커스텀 `FocusMate - 타이머` 상단바 삽입, 타이머 박스 및 버튼 디자인 개선 |
+| 기록 화면 | 상단바 통일, 필터 버튼 및 정렬 버튼 디자인 고도화, 기록 없음 상태시 깔끔한 안내문구 적용 |
+| 통계 화면 | 상단바 통일, `일간 / 주간 / 월간` ChoiceChip 디자인 개선 및 가운데 정렬 |
+
+---
+
+## 🧭 주요 UI 변경점 (요약)
+
+- 전체 페이지의 상단 AppBar → `FocusMate - [페이지명]` 형태로 통일
+- 상단바 색상 통일: `Colors.teal[400]` (기본)
+- 텍스트 컬러 통일: 제목 흰색(`Colors.white`), 바디 검정색
+- 버튼 컬러 통일: `Colors.teal[300]`, `Colors.orange[300]`
+- 카드 형태로 집중 시간 및 설정 정보 감싸기 (`BoxDecoration` 활용)
+
+---
+
+## 📊 통계 페이지 내부 리팩토링
+
+| 기능 | 개선 내용 |
+|------|-----------|
+| ChoiceChip | 기존 드롭다운 → 상단 중앙 ChoiceChip으로 통일 |
+| 시각적 피드백 | 선택된 상태의 컬러 → `Colors.teal[300]` |
+| 통계 차트 위젯 | 기존 DailyChartWidget은 유지, StatsScreen에서 통계 페이지 전체 디자인 담당 |
+| 상단 제목 제거 | 기존 "집중 및 휴식 시간 통계" 제목 제거로 깔끔한 디자인 확보 |
+
+---
+
+## 🗂️ 디렉토리 구조 (6주차(14) 기준 최종)
+
+lib/   
+├── main.dart   
+├── models/   
+│   └── focus_session.dart   
+├── services/   
+│   └── session_storage.dart   
+├── screens/   
+│   ├── home_screen.dart   
+│   ├── timer_screen.dart   
+│   ├── record_screen.dart   
+│   ├── stats_screen.dart   
+│   └── main_tab_screen.dart   
+└── widgets/   
+    ├── daily_chart_widget.dart   
+    ├── weekly_chart_widget.dart   
+    └── monthly_chart_widget.dart   
+
+---
+
+## 📸 리디자인 결과 예시
+
+> ✅ (이미지 스크린샷들은 발표 자료에서 첨부 예정)
+
+- 홈 화면  
+- 타이머 화면  
+- 기록 화면  
+- 통계 화면
+
+---
+
+## 🔥 현재까지 구현률 요약
+
+- 필수 기능 100% 완료
+- UI/UX 리디자인 완료 ✅
+- 데이터 저장 / 기록 / 필터링 / 통계 시각화 ✅
+
+---
+
+✅ **다음주 7주차(15)** → 최종 발표 예정
+
