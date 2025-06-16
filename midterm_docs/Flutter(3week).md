@@ -27,7 +27,7 @@ void main()
 }
 ```
 ---
-📝 생성자 활용 및 getter/setter
+### 📝 생성자 활용 및 getter/setter
 ```
 class Person {
   // 클래스 필드 이름 앞에 '_'를 붙이는 것은 다수의 언어에서 사용하는 스타일임.
@@ -64,7 +64,8 @@ void main()
   
 }
 ```
-
+---
+### 📝 생성자에 optional parameter 사용
 ```
 class Person {
   String? name;
@@ -83,7 +84,8 @@ void main()
 }
 
 ```
-
+---
+### 📝 getter/setter 활용: Rectangle 클래스
 ```
 class Rectangle {
   // 사각형을 왼쪽, 상단, 너비 , 높이로 표현
@@ -108,7 +110,8 @@ void main()
 }
 
 ```
-
+---
+### 📝 상속과 오버라이딩
 ```
 class Hero {
   String name = '영웅';
@@ -138,7 +141,8 @@ void main()
   print(hero.name);
 }
 ```
-
+---
+### 📝 인터페이스 구현 (implements)
 ```
 abstract class Monster {
   void attack();
@@ -170,7 +174,8 @@ void main()
   monsters.forEach((m) => m.attack());
 }
 ```
-
+---
+### 📝 열거형(enum) 활용
 ```
 enum Status { login, logout }
 
@@ -189,7 +194,8 @@ void main()
   }
 }
 ```
-
+---
+### 📝 리스트, 맵, 셋 활용
 ```
 void main()
 {
@@ -217,7 +223,8 @@ void main()
   print(s1);
 }
 ```
-
+---
+### 📝 콜백 활용 (함수 포인터)
 ```
 void func_a()
 {
@@ -240,3 +247,4 @@ void main()
   var list = [1,2,3,4,5];
   list.forEach(print);
 }
+```
