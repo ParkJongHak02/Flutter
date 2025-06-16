@@ -44,6 +44,55 @@ class _CurrentTimeScreenState extends State<CurrentTimeScreen> {
   void initState() {
     super.initState();
     _timer = Timer.periodic(Duration(seconds: 1), (Timer t) {
+ # 🚀 ParkJongHak02 - Flutter
+
+---
+
+## 📅 4주차 과제 - 현재 시각을 표시하는 앱
+
+---
+
+### 📝 코드 정리
+
+#### 📄 main.dart
+
+```dart
+import 'package:flutter/material.dart';
+import 'dart:async';
+import 'package:intl/intl.dart';
+import 'package:intl/date_symbol_data_local.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await initializeDateFormatting('ko');
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: '현재 시각',
+      home: CurrentTimeScreen(),
+    );
+  }
+}
+
+class CurrentTimeScreen extends StatefulWidget {
+  @override
+  _CurrentTimeScreenState createState() => _CurrentTimeScreenState();
+}
+
+class _CurrentTimeScreenState extends State<CurrentTimeScreen> {
+  late Timer _timer;
+  DateTime _now = DateTime.now();
+
+  @override
+  void initState() {
+    super.initState();
+    _timer = Timer.periodic(Duration(seconds: 1), (Timer t) {
       setState(() {
         _now = DateTime.now();
       });
@@ -79,9 +128,10 @@ class _CurrentTimeScreenState extends State<CurrentTimeScreen> {
     );
   }
 }
-```
 
-pubspec.yaml
+```
+---
+### 📄 pubspec.yaml
 ```
 name: flutter_homework_4week
 description: "A new Flutter project."
@@ -175,6 +225,7 @@ flutter:
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
 ```
-### 출력 화면
+---
+### 🖼️ 출력 화면
 ![33](https://github.com/user-attachments/assets/25dbaa68-2b04-4a9c-80ee-1c35d86c456c)
 
