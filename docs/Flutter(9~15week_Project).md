@@ -396,13 +396,11 @@ lib/
 ---
 
 ## 📸 리디자인 결과 예시
+![z](https://github.com/user-attachments/assets/bfd45f27-6173-4688-b617-c18d331e9188)
+![x](https://github.com/user-attachments/assets/f5431401-0e3b-4cfb-b952-59f2620dc390)
+![c](https://github.com/user-attachments/assets/0fab0325-ba87-47bc-bc0f-e05003f6da12)
+![v](https://github.com/user-attachments/assets/e5ef9e18-8826-4a92-9ddf-f9fd0f0a6f5b)
 
-> ✅ (이미지 스크린샷들은 발표 자료에서 첨부 예정)
-
-- 홈 화면  
-- 타이머 화면  
-- 기록 화면  
-- 통계 화면
 
 ---
 
