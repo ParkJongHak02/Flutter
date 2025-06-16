@@ -8,38 +8,7 @@
 
 ## 📝 실습 1 (a_6_1) - Navigator, Route, 데이터 전달
 
----
 
-### 📄 main.dart
-
-```dart
-import 'package:flutter/material.dart';
-import 'package:a_6_1/first_page.dart';
-import 'package:a_6_1/second_page.dart';
-
-void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-      ),
-      home: const FirstPage(),
-      routes: {
-        '/first': (context) => FirstPage(),
-        '/second': (context) => SecondPage(),
-      }
-    );
-  }
-}
-```
 ---
 ### 📄first_page.dart
   ```
@@ -75,7 +44,9 @@ class MyApp extends StatelessWidget {
     }
   }
   ```
-  second_page.dart
+  
+---
+### 📄second_page.dart
   ```
   import 'package:flutter/material.dart';
   import 'package:a_6_1/Person.dart';
@@ -102,7 +73,9 @@ class MyApp extends StatelessWidget {
   }
   
   ```
-  main.dart
+  
+---
+### 📄main.dart
   ```
   import 'package:flutter/material.dart';
   import 'package:a_6_1/first_page.dart';
@@ -133,7 +106,9 @@ class MyApp extends StatelessWidget {
     }
   }
   ```
-  Person.dart
+  
+---
+### 📄Person.dart
   ```
   class Person {
     String name;
@@ -142,8 +117,11 @@ class MyApp extends StatelessWidget {
     Person(this.name, this.age);
   }
   ```
-  ### 수업 정리(a_6_3)
-  main.dart
+---
+### 📝 실습 2 (a_6_3) - 다양한 입력 위젯 및 이벤트 처리
+  
+---
+### 📄main.dart
   ```
   import 'package:a_6_3/test_DropDownButton.dart';
   import 'package:a_6_3/test_Gesture.dart';
@@ -236,7 +214,9 @@ class MyApp extends StatelessWidget {
   // }
   
   ```
-  test_CheckBox.dart
+  
+---
+### 📄test_CheckBox.dart
   ```
   import 'package:flutter/material.dart';
   
@@ -291,7 +271,9 @@ class MyApp extends StatelessWidget {
     }
   
   ```
-  test_dialog.dart
+  
+---
+### 📄test_dialog.dart
   ```
   import 'package:flutter/material.dart';
   
@@ -348,7 +330,9 @@ class MyApp extends StatelessWidget {
   }
   
   ```
-  test_DropDownButton.dart
+  
+---
+### 📄test_DropDownButton.dart
   ```
   import 'package:flutter/material.dart';
   
@@ -397,7 +381,9 @@ class MyApp extends StatelessWidget {
   }
   
   ```
-  test_Gessture.dart
+  
+---
+### 📄test_Gessture.dart
   ```
   import 'package:flutter/material.dart';
   
@@ -433,7 +419,9 @@ class MyApp extends StatelessWidget {
   }
   
   ```
-  test_Radio.dart
+  
+---
+### 📄test_Radio.dart
   ```
   import 'package:flutter/material.dart';
   
@@ -517,7 +505,9 @@ class MyApp extends StatelessWidget {
   }
   
   ```
-  test_TextField.dart
+  
+---
+### 📄test_TextField.dart
   ```
   import 'package:flutter/material.dart';
   
@@ -543,7 +533,9 @@ class MyApp extends StatelessWidget {
   }
   
   ```
-  ### 화면 출력
+
+---
+### 🖼️화면 출력
   ![1 (1)](https://github.com/user-attachments/assets/a33be731-9e8f-4569-b923-da00a7804483)
   ![2 (1)](https://github.com/user-attachments/assets/5ae20298-cf5b-49c3-a42b-f40eb49d14f8)
   ![3 (1)](https://github.com/user-attachments/assets/61d6e121-0b3c-46b1-b62c-480bb330ee88)
